@@ -1,13 +1,17 @@
 import './App.css';
 import Movies from './shared/components/list/Movies';
+import Search from './shared/components/searchForm/search';
 
 function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
+        <div>
+          <Search/>
+        </div>
         <Movies />
-      </header>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,12 @@
 import React from "react";
 
 const search = () => {
-  <>This will hold the search filed</>;
+  return (
+    <div>
+      <input type="text" placeholder="Enter movie name" name="name" id="name" />
+      <button type="button">Search</button>
+    </div>
+  );
 };
 
 export default search;
