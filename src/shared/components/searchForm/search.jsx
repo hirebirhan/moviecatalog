@@ -2,9 +2,11 @@ import React from "react";
 
 const search = () => {
   return (
-    <div>
-      <input type="text" placeholder="Enter movie name" name="name" id="name" />
-      <button type="button">Search</button>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Enter movie name" />
+      <button class="btn btn-outline-primary" type="button">
+        Search
+      </button>
     </div>
   );
 };
