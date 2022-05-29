@@ -13,12 +13,12 @@ const search = () => {
   };
 
   return (
-    <div className="input-group">
+    <div className="input-group flex-row ">
       <input
         type="text"
         value={keyword}
         onChange={handleKeyChange}
-        className="form-control"
+        className="form-control "
         placeholder="Enter movie name"
       />
       <button
