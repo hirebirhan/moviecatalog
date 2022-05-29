@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { useMovieStore } from "../../../states/movie.state.store";
+import movieStore from "../../../states/movie.store";
 
 const search = () => {
   const [keyword, setKeyWord] = useState("");
-  const { search } = useMovieStore.getState();
+  const { searchMovies } = movieStore();
 
   const handleKeyChange = (e) => {
     setKeyWord(e.currentTarget.value);
   };
   const handleSearch = () => {
-    if (keyword) search(keyword);
+    if (keyword) searchMovies(keyword);
   };
 
   return (

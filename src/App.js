@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
-import Movies from './shared/components/list/Movies';
 import Header from './shared/components/toolbar/header';
+import MovieList from './shared/components/list/MovieList'
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
       </div>
       <div className='container'>
 
-        <Movies />
+        <MovieList />
       </div>
 
 
