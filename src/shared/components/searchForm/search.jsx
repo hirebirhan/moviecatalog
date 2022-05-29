@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { movieStore } from "../../../states/movie.state.store";
+import { useMovieStore } from "../../../states/movie.state.store";
 
 const search = () => {
-  const { keyword, setKeyWord } = useState("");
-  const { search } = movieStore.getState();
+  const [keyword, setKeyWord] = useState("");
+  const { search } = useMovieStore.getState();
 
+  const handleKeyChange = (e) => {
+    setKeyWord(e.currentTarget.value);
+  };
   const handleSearch = () => {
     if (keyword) search(keyword);
   };
@@ -14,7 +17,7 @@ const search = () => {
       <input
         type="text"
         value={keyword}
-        onChange={(e) => setKeyWord(e.target.value)}
+        onChange={handleKeyChange}
         className="form-control"
         placeholder="Enter movie name"
       />

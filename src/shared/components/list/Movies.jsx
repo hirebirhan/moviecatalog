@@ -1,15 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Movie from "../movie/movieItem";
-import { movieStore } from "../../../states/movie.state.store";
+import { useMovieStore } from "../../../states/movie.state.store";
 
 const movies = () => {
-  const { movies, getMovies } = movieStore.getState();
-  console.log("store", movies);
+  const { movies, getMovies } = useMovieStore.getState();
   getMovies();
-
-  useEffect(() => {
-    getMovies();
-  }, []);
+  console.log("movies", movies);
 
   return (
     <div>
