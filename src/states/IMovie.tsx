@@ -1,4 +1,4 @@
-import { Rating } from "./movie.state.store";
+import { Rating } from "./Rating";
 
 export interface IMovie {
   Title: string;
