@@ -1,6 +1,6 @@
 import './App.css';
+import React from 'react';
 import Movies from './shared/components/list/Movies';
-import Search from './shared/components/searchForm/search';
 import Header from './shared/components/toolbar/header';
 
 function App() {

@@ -6,9 +6,7 @@ const header = () => {
     <>
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Movie Catalog
-          </a>
+          <span className="navbar-brand">Movie Catalog</span>
           <button
             className="navbar-toggler"
             type="button"

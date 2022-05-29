@@ -1,22 +1,22 @@
 import React from "react";
 
 const movie = (movieItem) => {
-  console.log("movie item", movieItem);
   const { movie } = movieItem;
   return (
     <div>
       Title: {movie.Actors}
-      <div className="card">
+      <div className="card  ">
         <img
-          src="https://image.tmdb.org/t/p/original/bvYjhsbxOBwpm8xLE5BhdA3a8CZ.jpg"
-          className="card-img-top img-fluid"
+          src="https://www.joblo.com/assets/images/joblo/posters/2019/01/Alita-character-poster-1.jpg"
+          className="card-img-top"
           alt="..."
         />
         <div className="card-body">
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
+          <h5 className="card-title">Alita: {movie.Actors}</h5>
+          <span className="movie_info">2019</span>
+          <span className="movie_info float-right">
+            <i className="fas fa-star"></i> 9 / 10
+          </span>
         </div>
       </div>
     </div>
