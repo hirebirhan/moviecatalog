@@ -1,8 +1,9 @@
 import React from "react";
-import create, { createStore } from "zustand";
-import axios, { AxiosResponse } from "axios";
+import { createStore } from "zustand";
+import axios from "axios";
 import { IMovie } from "./IMovie";
-const url = "http://www.omdbapi.com/?i=tt3896198&apikey=fdf97d62";
+const url = "http://www.omdbapi.com/?i=tt3896198&apikey=";
+const apiKey = "fdf97d62";
 
 interface movieState {
   movies: IMovie[];
@@ -13,14 +14,14 @@ interface movieState {
 
 export const movieStore = (set: any, get: any): movieState => ({
   getMovies: () => {
-    axios.get(url).then((response) => {
+    axios.get(url + apiKey).then((response) => {
       let movies = [];
       if (response.status == 200) {
         movies.push(response.data);
       }
       get().setMovies(movies);
     });
-    return get();
+    return useMovieStore.getState();
   },
   search: () => {
     Promise.resolve([]);
