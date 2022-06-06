@@ -3,22 +3,19 @@ import React from "react";
 const movie = (movieItem) => {
   const { movie } = movieItem;
   return (
-    <div>
-      Title: {movie.Title}
-      <div className="card  ">
+    <div className="row">
+      <div className="col col-lg-2 my-1">
         <img
           src={movie.Poster}
-          style={{ width: "300px", height: "300px" }}
-          className="card-img-top img-responsive"
-          alt="..."
+          className="img-thumbnail mx-auto rounded"
+          alt={movie.Title}
         />
-        <div className="card-body">
-          <h5 className="card-title">Alita: {movie.Actors}</h5>
-          <span className="movie_info">{movie.Year}</span>
-          <span className="movie_info float-right">
-            <i className="fas fa-star"></i> 9 / 10
-          </span>
-        </div>
+      </div>
+      <div className="col-8 my-1">
+        <div>Title: {movie.Title}</div>
+        <div> Year: {movie.Year}</div>
+        <div> Type: {movie.Type}</div>
+        <div>Type: {movie.imdbID}</div>
       </div>
     </div>
   );

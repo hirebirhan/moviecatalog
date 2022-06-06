@@ -7,7 +7,6 @@ const header = () => {
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <span className="navbar-brand">Movie Catalog</span>
-
           <div className="d-flex flex-row ">
             <Search />
           </div>

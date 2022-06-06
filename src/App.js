@@ -11,7 +11,6 @@ function App() {
         <Header />
       </div>
       <div className='container'>
-
         <MovieList />
       </div>
 
